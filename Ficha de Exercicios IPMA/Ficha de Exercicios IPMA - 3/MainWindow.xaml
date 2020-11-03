@@ -1,0 +1,68 @@
+﻿<Window x:Class="Ficha_de_Exercicios_IPMA___3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ficha_de_Exercicios_IPMA___3"
+        Loaded="Window_Loaded"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ComboBox SelectedValuePath="Key" x:Name="LocaisComboBox" HorizontalAlignment="Left" Height="42" Margin="163,10,0,0" VerticalAlignment="Top" Width="283" FontSize="24">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Path=Key}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Label Content="Distrito:" FontSize="24" HorizontalAlignment="Left" Height="42" Margin="50,10,0,0" VerticalAlignment="Top" Width="108"/>
+        <Button x:Name="ConsultarPrevisoes" Content="Consultar Previsões" FontSize="16" HorizontalAlignment="Left" Height="42" Margin="486,10,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click"/>
+        <Grid HorizontalAlignment="Left" Height="331" VerticalAlignment="Top" Width="697" Margin="50,79,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image x:Name="ImageD1" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Image>
+            <Image x:Name="ImageD2" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Image>
+            <Image x:Name="ImageD3" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Image>
+            <Image x:Name="ImageD4" Grid.Column="3" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Image>
+            <Image x:Name="ImageD5" Grid.Column="4" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Image>
+
+            <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
+                <TextBlock x:Name="TminD1" Background="Blue" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+                <TextBlock x:Name="TmaxD1" Background="Red" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+                <TextBlock x:Name="TminD2" Background="Blue" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+                <TextBlock x:Name="TmaxD2" Background="Red" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Column="2" Grid.Row="1" Orientation="Horizontal">
+                <TextBlock x:Name="TminD3" Background="Blue" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+                <TextBlock x:Name="TmaxD3" Background="Red" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Column="3" Grid.Row="1" Orientation="Horizontal">
+                <TextBlock x:Name="TminD4" Background="Blue" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+                <TextBlock x:Name="TmaxD4" Background="Red" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Column="4" Grid.Row="1" Orientation="Horizontal">
+                <TextBlock x:Name="TminD5" Background="Blue" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+                <TextBlock x:Name="TmaxD5" Background="Red" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+            </StackPanel>
+
+            <TextBlock x:Name="DateD1" Grid.Column="0" Grid.Row="2" FontSize="16" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+            <TextBlock x:Name="DateD2" Grid.Column="1" Grid.Row="2" FontSize="16" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+            <TextBlock x:Name="DateD3" Grid.Column="2" Grid.Row="2" FontSize="16" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+            <TextBlock x:Name="DateD4" Grid.Column="3" Grid.Row="2" FontSize="16" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+            <TextBlock x:Name="DateD5" Grid.Column="4" Grid.Row="2" FontSize="16" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+        </Grid>
+    </Grid>
+</Window>

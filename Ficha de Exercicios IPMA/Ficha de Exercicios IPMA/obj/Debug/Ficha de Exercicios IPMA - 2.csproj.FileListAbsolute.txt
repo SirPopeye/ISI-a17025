@@ -1,0 +1,13 @@
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha de Exercicios IPMA\Ficha de Exercicios IPMA\bin\Debug\Ficha de Exercicios IPMA.exe.config
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha de Exercicios IPMA\Ficha de Exercicios IPMA\bin\Debug\Ficha de Exercicios IPMA.exe
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha de Exercicios IPMA\Ficha de Exercicios IPMA\bin\Debug\Ficha de Exercicios IPMA.pdb
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha de Exercicios IPMA\Ficha de Exercicios IPMA\bin\Debug\ClassLibrary.dll
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha de Exercicios IPMA\Ficha de Exercicios IPMA\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha de Exercicios IPMA\Ficha de Exercicios IPMA\bin\Debug\ClassLibrary.pdb
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha de Exercicios IPMA\Ficha de Exercicios IPMA\bin\Debug\ClassLibrary.dll.config
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha de Exercicios IPMA\Ficha de Exercicios IPMA\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha de Exercicios IPMA\Ficha de Exercicios IPMA\obj\Debug\Ficha de Exercicios IPMA - 2.csprojAssemblyReference.cache
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha de Exercicios IPMA\Ficha de Exercicios IPMA\obj\Debug\Ficha de Exercicios IPMA - 2.csproj.CoreCompileInputs.cache
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha de Exercicios IPMA\Ficha de Exercicios IPMA\obj\Debug\Ficha de Exercicios IPMA - 2.csproj.CopyComplete
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha de Exercicios IPMA\Ficha de Exercicios IPMA\obj\Debug\Ficha de Exercicios IPMA.exe
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha de Exercicios IPMA\Ficha de Exercicios IPMA\obj\Debug\Ficha de Exercicios IPMA.pdb
