@@ -1,15 +1,20 @@
-﻿using Newtonsoft.Json;
+﻿/*	
+	<author>Rafael Reis</author>
+	<email>a17025@alunos.ipca.pt</email>
+*/
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
     public class PrevisaoProcessor
     {
+        /// <summary>
+        /// Loads weather forecast from api.ipma.pt
+        /// </summary>
+        /// <param name="globalIdLocal"></param>
+        /// <returns></returns>
         public static async Task<PrevisaoIpmaModel> LoadPrevisoes(int globalIdLocal)
         {
             ApiHelper apiHelper = new ApiHelper();

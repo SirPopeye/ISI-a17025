@@ -1,4 +1,8 @@
-﻿using ClassLibrary;
+﻿/*	
+	<author>Rafael Reis</author>
+	<email>a17025@alunos.ipca.pt</email>
+*/
+using ClassLibrary;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -27,6 +31,11 @@ namespace Ficha_de_Exercicios_IPMA___1
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// Loads Info from locais.csv
+        /// Function provided by teacher Luis Ferreira.
+        /// </summary>
+        /// <returns></returns>
         private static Dictionary<int, string> LoadLocalInfo()
         {
             Dictionary<int, string> dicLocais = new Dictionary<int, string>();
@@ -55,6 +64,10 @@ namespace Ficha_de_Exercicios_IPMA___1
             return dicLocais;
         }
 
+        /// <summary>
+        /// Writes Json File.
+        /// </summary>
+        /// <param name="currentPrevisao"></param>
         private static void WriteFiles(PrevisaoIpmaModel currentPrevisao)
         {
             // Writes json File

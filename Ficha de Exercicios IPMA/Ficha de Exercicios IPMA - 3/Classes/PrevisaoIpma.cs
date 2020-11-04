@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*	
+	<author>Rafael Reis</author>
+	<email>a17025@alunos.ipca.pt</email>
+*/
+using System;
 
 namespace ClassLibrary
 {
@@ -17,8 +17,8 @@ namespace ClassLibrary
         // Elemento adicional -> local, amplitudeTermica
         public string local { get; set; }
         public float amplitudeTermica { get; set; }
-        public float temperaturaMinima { get; set; }
-        public float temperaturaMaxima { get; set; }
+        public float temperaturaMinimaSemanal { get; set; }
+        public float temperaturaMaximaSemanal { get; set; }
 
     }
 }

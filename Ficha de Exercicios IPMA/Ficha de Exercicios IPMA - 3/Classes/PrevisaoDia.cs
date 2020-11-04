@@ -1,9 +1,8 @@
-﻿using Ficha_de_Exercicios_IPMA___3.Classes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*	
+	<author>Rafael Reis</author>
+	<email>a17025@alunos.ipca.pt</email>
+*/
+using Ficha_de_Exercicios_IPMA___3.Classes;
 
 namespace ClassLibrary
 {

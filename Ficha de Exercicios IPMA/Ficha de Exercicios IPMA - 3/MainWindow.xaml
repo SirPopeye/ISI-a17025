@@ -4,10 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ficha_de_Exercicios_IPMA___3"
+        ResizeMode="NoResize"
         Loaded="Window_Loaded"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="740">
+    <Grid Margin="0,0,3.6,0">
         <ComboBox SelectedValuePath="Key" x:Name="LocaisComboBox" HorizontalAlignment="Left" Height="42" Margin="163,10,0,0" VerticalAlignment="Top" Width="283" FontSize="24">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
@@ -16,8 +17,8 @@
             </ComboBox.ItemTemplate>
         </ComboBox>
         <Label Content="Distrito:" FontSize="24" HorizontalAlignment="Left" Height="42" Margin="50,10,0,0" VerticalAlignment="Top" Width="108"/>
-        <Button x:Name="ConsultarPrevisoes" Content="Consultar Previsões" FontSize="16" HorizontalAlignment="Left" Height="42" Margin="486,10,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click"/>
-        <Grid HorizontalAlignment="Left" Height="331" VerticalAlignment="Top" Width="697" Margin="50,79,0,0">
+        <Button x:Name="ConsultarPrevisoes" Content="Consultar Previsões" FontSize="16" HorizontalAlignment="Left" Height="42" Margin="486,10,0,0" VerticalAlignment="Top" Width="173" Click="Button_Click"/>
+        <Grid HorizontalAlignment="Left" Height="331" VerticalAlignment="Top" Width="661" Margin="37,79,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="1*"/>

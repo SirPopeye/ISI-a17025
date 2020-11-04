@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿/*	
+	<author>Rafael Reis</author>
+	<email>a17025@alunos.ipca.pt</email>
+*/
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ClassLibrary
 {

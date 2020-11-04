@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
-using ClassLibrary;
-
+﻿/*	
+	<author>Rafael Reis</author>
+	<email>a17025@alunos.ipca.pt</email>
+*/
 namespace Ficha_de_Exercicios_IPMA___3.Classes
 {
     public class WeatherImages
@@ -20,13 +15,13 @@ namespace Ficha_de_Exercicios_IPMA___3.Classes
         {
             if (id == 1) return "01";
             if (id == 2 || id == 3) return "02";
-            if (id == 3) return "03";
-            if (new[] { 5, 24, 25, 27 }.All(x => x == id)) return "04";
-            if (new[] { 6, 8, 9, 11, 14 }.All(x => x == id)) return "09";
-            if (new[] { 7, 10, 12, 13, 15 }.All(x => x == id)) return "10";
-            if (new[] { 19, 20, 23 }.All(x => x == id)) return "11";
-            if (new[] { 28, 21, 22 }.All(x => x == id)) return "13";
-            if (new[] { 16, 17, 26 }.All(x => x == id)) return "50";
+            if (id == 4) return "03";
+            if (id == 5 || id == 24 || id == 25 || id == 27) return "04";
+            if (id == 6 || id == 8 || id == 9 || id == 11 || id == 14) return "09";
+            if (id == 7 || id == 10 || id == 12 || id == 13 || id == 15) return "10";
+            if (id == 19 || id == 20 || id == 23) return "11";
+            if (id == 18 || id == 21 || id == 22) return "13";
+            if (id == 16 || id == 17 || id == 26) return "50";
             return "-1";
         }
     }

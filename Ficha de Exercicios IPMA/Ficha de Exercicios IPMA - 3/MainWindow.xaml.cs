@@ -1,4 +1,8 @@
-﻿using ClassLibrary;
+﻿/*	
+	<author>Rafael Reis</author>
+	<email>a17025@alunos.ipca.pt</email>
+*/
+using ClassLibrary;
 using Ficha_de_Exercicios_IPMA___3.Classes;
 using Newtonsoft.Json;
 using System;
@@ -6,17 +10,10 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Ficha_de_Exercicios_IPMA___3
 {
@@ -32,6 +29,10 @@ namespace Ficha_de_Exercicios_IPMA___3
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Loads Loacais and converts to type Dictionary<string, int>.
+        /// </summary>
+        /// <returns></returns>
         private static async Task<Dictionary<string, int>> LoadLocalInfo()
         {
             var locais = await LocalProcessor.LoadLocais();
@@ -41,10 +42,17 @@ namespace Ficha_de_Exercicios_IPMA___3
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            //Loads Locais.
             dicLocais = await LoadLocalInfo();
             LocaisComboBox.ItemsSource = dicLocais;
         }
 
+        /// <summary>
+        /// Loads weather forecast info, finds extra values and calls functions to write info on json file.
+        /// (tmed, amplitudetermica, temperaturaMinimaSemanal, temperaturaMaximaSemanal)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             var local = LocaisComboBox.SelectedValue.ToString();
@@ -53,6 +61,7 @@ namespace Ficha_de_Exercicios_IPMA___3
             PrevisaoIpmaModel currentPrevisao = await PrevisaoProcessor.LoadPrevisoes(globalID);
 
             PrevisaoIpma previsaoIpma = JsonConvert.DeserializeObject<PrevisaoIpma>(JsonConvert.SerializeObject(currentPrevisao));
+            previsaoIpma.local = local;
 
             int index = 0;
             float maxTemp = -999, minTemp = 999; 
@@ -69,22 +78,27 @@ namespace Ficha_de_Exercicios_IPMA___3
                 if (tmax > maxTemp) maxTemp = tmax;
                 if (tmin < minTemp) minTemp = tmin;
 
+                //Writes Files
+                WriteFiles1Day(previsaoIpma.data[index], previsaoIpma.local);
+
                 index ++;
             }
 
             previsaoIpma.amplitudeTermica = maxTemp - minTemp;
-            previsaoIpma.temperaturaMinima = minTemp;
-            previsaoIpma.temperaturaMaxima = maxTemp;
+            previsaoIpma.temperaturaMinimaSemanal = minTemp;
+            previsaoIpma.temperaturaMaximaSemanal = maxTemp;
             previsaoIpma.local = local;
 
             UpdateUI(previsaoIpma);
+
+            WriteFiles5Day(previsaoIpma);
         }
 
         /// <summary>
         /// Updates UI with correct Values.
         /// </summary>
         /// <param name="previsaoIpma"></param>
-        private async void UpdateUI(PrevisaoIpma previsaoIpma)
+        private void UpdateUI(PrevisaoIpma previsaoIpma)
         {
             var TempTextBoxMin = new[] { TminD1, TminD2, TminD3, TminD4, TminD5 };
             var TempTextBoxMax = new[] { TmaxD1, TmaxD2, TmaxD3, TmaxD4, TmaxD5 };
@@ -98,35 +112,58 @@ namespace Ficha_de_Exercicios_IPMA___3
                 TempTextBoxMax[index].Text = pd.temperatura.tmax.ToString() + "ºC  ";
                 DateTextBox[index].Text = pd.forecastDate;
 
-                //var code = GetCode(pd.idWeatherType);
-                //Console.WriteLine(pd.idWeatherType +" <-> " + code);
-                await LoadImage(GetCode(pd.idWeatherType), Images[index]);
+                LoadImage(WeatherImages.GetCode(pd.idWeatherType), Images[index]);
                 
                 index++;
             }
         }
 
-        private async Task LoadImage(string code, Image img)
+        /// <summary>
+        /// Loads Image correspondent with weather ID.
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="img"></param>
+        /// <returns></returns>
+        private void LoadImage(string code, Image img)
         {
             if (!(code == "-1"))
             {
                 var uriSource = new Uri($"http://openweathermap.org/img/wn/{code}d@2x.png", UriKind.Absolute);
                 img.Source = new BitmapImage(uriSource);
             }
+            else
+            {
+                throw new Exception("Invalid Weather Type Code.");
+            }
         }
 
-        private string GetCode(int id)
+        /// <summary>
+        /// Writes File of 5 day weather forecast.
+        /// </summary>
+        /// <param name="currentPrevisao"></param>
+        private static void WriteFiles5Day(PrevisaoIpma currentPrevisao)
         {
-            if (id == 1) return "01";
-            if (id == 2 || id == 3) return "02";
-            if (id == 4) return "03";
-            if (id == 5 || id == 24 || id == 25 || id == 27) return "04";
-            if (id == 6 || id == 8 || id == 9 || id == 11 || id == 14) return "09";
-            if (id == 7 || id == 10 || id == 12 || id == 13 || id == 15) return "10";
-            if (id == 19 || id == 20 || id == 23) return "11";
-            if (id == 18 || id == 21 || id == 22) return "13";
-            if (id == 16 || id == 17 || id == 26) return "50";
-            return "-1";
+            // Writes json File
+            using (StreamWriter file = File.CreateText($@"./output/{currentPrevisao.globalIdLocal}-detalhe.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, currentPrevisao);
+            }
+        }
+
+        /// <summary>
+        /// Writes File of 1 day weather forecast.
+        /// </summary>
+        /// <param name="previsaoDia"></param>
+        /// <param name="local"></param>
+        private static void WriteFiles1Day(PrevisaoDia previsaoDia, string local)
+        {
+            // Writes json File
+            using (StreamWriter file = File.CreateText($@"./output/{local}-{previsaoDia.forecastDate}.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, previsaoDia);
+            }
         }
     }
 }

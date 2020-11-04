@@ -1,13 +1,14 @@
-﻿using System;
+﻿/*	
+	<author>Rafael Reis</author>
+	<email>a17025@alunos.ipca.pt</email>
+*/
+using ClassLibrary;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Xml;
-using System.Xml.Serialization;
-using ClassLibrary;
-using Newtonsoft.Json;
 
 namespace Ficha_de_Exercicios_IPMA
 {
