@@ -165,5 +165,45 @@ namespace Ficha_de_Exercicios_IPMA___3
                 serializer.Serialize(file, previsaoDia);
             }
         }
+
+        /// <summary>
+        /// Generates File with weather forecast for the entire country for the present date. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            PrevisaoDiaPais previsaoDiaPais = new PrevisaoDiaPais();
+
+            foreach(KeyValuePair<string, int> kv in dicLocais)
+            {
+                PrevisaoIpmaModel currentPrevisao = await PrevisaoProcessor.LoadPrevisoes(kv.Value);
+
+                PrevisaoIpma previsaoIpma = JsonConvert.DeserializeObject<PrevisaoIpma>(JsonConvert.SerializeObject(currentPrevisao));
+
+                previsaoIpma.data[0].temperatura.tmax = float.Parse(currentPrevisao.data[0].tMax, CultureInfo.InvariantCulture.NumberFormat); ;
+                previsaoIpma.data[0].temperatura.tmin = float.Parse(currentPrevisao.data[0].tMin, CultureInfo.InvariantCulture.NumberFormat);
+                previsaoIpma.data[0].temperatura.tmedia = ((previsaoIpma.data[0].temperatura.tmax + previsaoIpma.data[0].temperatura.tmin) / 2);
+
+                previsaoIpma.data[0].local = kv.Key;
+                previsaoDiaPais.data.Add(previsaoIpma.data[0]);
+            }
+
+            WriteFilesDayCountry(previsaoDiaPais);
+        }
+
+        /// <summary>
+        /// Writes file with weather forecast for the entire country for today.
+        /// </summary>
+        /// <param name="previsaoDiaPais"></param>
+        private static void WriteFilesDayCountry(PrevisaoDiaPais previsaoDiaPais)
+        {
+            // Writes json File
+            using (StreamWriter file = File.CreateText($@"./output/Pais-{previsaoDiaPais.data[0].forecastDate}.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, previsaoDiaPais);
+            }
+        }
     }
 }

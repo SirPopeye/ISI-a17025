@@ -18,6 +18,9 @@ namespace ClassLibrary
         public int classPrecInt { get; set; }
         public string latitude { get; set; }
 
+        // Informação Adicional
+        public string local { get; set; }
+
         public PrevisaoDia()
         {
             this.temperatura = new Temperatura();
