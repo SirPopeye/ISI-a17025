@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://ficha_4_calculadora.pt/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://ficha_4_calculadora.pt/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Serviço com funções de Calculadora.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://ficha_4_calculadora.pt/">
+      <s:element name="Adicao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="b" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdicaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AdicaoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Subtracao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="b" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubtracaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SubtracaoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Multiplicacao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="b" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MultiplicacaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MultiplicacaoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Divisao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="b" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DivisaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DivisaoResult" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Factorial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FactorialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FactorialResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Potencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="num" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="exp" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PotenciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PotenciaResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValorAbsoluto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValorAbsolutoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValorAbsolutoResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AdicaoSoapIn">
+    <wsdl:part name="parameters" element="tns:Adicao" />
+  </wsdl:message>
+  <wsdl:message name="AdicaoSoapOut">
+    <wsdl:part name="parameters" element="tns:AdicaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubtracaoSoapIn">
+    <wsdl:part name="parameters" element="tns:Subtracao" />
+  </wsdl:message>
+  <wsdl:message name="SubtracaoSoapOut">
+    <wsdl:part name="parameters" element="tns:SubtracaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MultiplicacaoSoapIn">
+    <wsdl:part name="parameters" element="tns:Multiplicacao" />
+  </wsdl:message>
+  <wsdl:message name="MultiplicacaoSoapOut">
+    <wsdl:part name="parameters" element="tns:MultiplicacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DivisaoSoapIn">
+    <wsdl:part name="parameters" element="tns:Divisao" />
+  </wsdl:message>
+  <wsdl:message name="DivisaoSoapOut">
+    <wsdl:part name="parameters" element="tns:DivisaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="FactorialSoapIn">
+    <wsdl:part name="parameters" element="tns:Factorial" />
+  </wsdl:message>
+  <wsdl:message name="FactorialSoapOut">
+    <wsdl:part name="parameters" element="tns:FactorialResponse" />
+  </wsdl:message>
+  <wsdl:message name="PotenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:Potencia" />
+  </wsdl:message>
+  <wsdl:message name="PotenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:PotenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValorAbsolutoSoapIn">
+    <wsdl:part name="parameters" element="tns:ValorAbsoluto" />
+  </wsdl:message>
+  <wsdl:message name="ValorAbsolutoSoapOut">
+    <wsdl:part name="parameters" element="tns:ValorAbsolutoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CalculadoraSoap">
+    <wsdl:operation name="Adicao">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calcula a soma de dois numeros inteiros</wsdl:documentation>
+      <wsdl:input message="tns:AdicaoSoapIn" />
+      <wsdl:output message="tns:AdicaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Subtracao">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calcula a diferença entre dois numeros inteiros</wsdl:documentation>
+      <wsdl:input message="tns:SubtracaoSoapIn" />
+      <wsdl:output message="tns:SubtracaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Multiplicacao">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calcula a multiplicaçao entre dois numeros inteiros.</wsdl:documentation>
+      <wsdl:input message="tns:MultiplicacaoSoapIn" />
+      <wsdl:output message="tns:MultiplicacaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Divisao">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calcula a divisao entre dois numeros inteiros em que b diferente de 0.</wsdl:documentation>
+      <wsdl:input message="tns:DivisaoSoapIn" />
+      <wsdl:output message="tns:DivisaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Factorial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calcula o factorial de um numero inteiro nao negativo.</wsdl:documentation>
+      <wsdl:input message="tns:FactorialSoapIn" />
+      <wsdl:output message="tns:FactorialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Potencia">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calcula a potencia de 'num' elevado a 'exp'.</wsdl:documentation>
+      <wsdl:input message="tns:PotenciaSoapIn" />
+      <wsdl:output message="tns:PotenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValorAbsoluto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calcula o valor absoluto de um numero.</wsdl:documentation>
+      <wsdl:input message="tns:ValorAbsolutoSoapIn" />
+      <wsdl:output message="tns:ValorAbsolutoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CalculadoraSoap" type="tns:CalculadoraSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Adicao">
+      <soap:operation soapAction="http://ficha_4_calculadora.pt/Adicao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Subtracao">
+      <soap:operation soapAction="http://ficha_4_calculadora.pt/Subtracao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Multiplicacao">
+      <soap:operation soapAction="http://ficha_4_calculadora.pt/Multiplicacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Divisao">
+      <soap:operation soapAction="http://ficha_4_calculadora.pt/Divisao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Factorial">
+      <soap:operation soapAction="http://ficha_4_calculadora.pt/Factorial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Potencia">
+      <soap:operation soapAction="http://ficha_4_calculadora.pt/Potencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValorAbsoluto">
+      <soap:operation soapAction="http://ficha_4_calculadora.pt/ValorAbsoluto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CalculadoraSoap12" type="tns:CalculadoraSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Adicao">
+      <soap12:operation soapAction="http://ficha_4_calculadora.pt/Adicao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Subtracao">
+      <soap12:operation soapAction="http://ficha_4_calculadora.pt/Subtracao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Multiplicacao">
+      <soap12:operation soapAction="http://ficha_4_calculadora.pt/Multiplicacao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Divisao">
+      <soap12:operation soapAction="http://ficha_4_calculadora.pt/Divisao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Factorial">
+      <soap12:operation soapAction="http://ficha_4_calculadora.pt/Factorial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Potencia">
+      <soap12:operation soapAction="http://ficha_4_calculadora.pt/Potencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValorAbsoluto">
+      <soap12:operation soapAction="http://ficha_4_calculadora.pt/ValorAbsoluto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Calculadora">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Serviço com funções de Calculadora.</wsdl:documentation>
+    <wsdl:port name="CalculadoraSoap" binding="tns:CalculadoraSoap">
+      <soap:address location="https://localhost:44308/Services/Calculadora.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CalculadoraSoap12" binding="tns:CalculadoraSoap12">
+      <soap12:address location="https://localhost:44308/Services/Calculadora.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,14 @@
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Rest Client\Rest Client\bin\Debug\Rest Client.exe.config
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Rest Client\Rest Client\bin\Debug\Rest Client.exe
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Rest Client\Rest Client\bin\Debug\Rest Client.pdb
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Rest Client\Rest Client\bin\Debug\Nancy.dll
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Rest Client\Rest Client\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Rest Client\Rest Client\bin\Debug\System.Private.DataContractSerialization.dll
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Rest Client\Rest Client\bin\Debug\System.Reflection.TypeExtensions.dll
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Rest Client\Rest Client\bin\Debug\Nancy.xml
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Rest Client\Rest Client\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Rest Client\Rest Client\obj\Debug\Rest Client.csprojAssemblyReference.cache
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Rest Client\Rest Client\obj\Debug\Rest Client.csproj.CoreCompileInputs.cache
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Rest Client\Rest Client\obj\Debug\Rest Client.csproj.CopyComplete
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Rest Client\Rest Client\obj\Debug\Rest Client.exe
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Rest Client\Rest Client\obj\Debug\Rest Client.pdb

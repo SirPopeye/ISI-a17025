@@ -1,0 +1,10 @@
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha 4\CalculadoraClient\CalculadoraClient\bin\Debug\CalculadoraClient.exe.config
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha 4\CalculadoraClient\CalculadoraClient\bin\Debug\CalculadoraClient.exe
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha 4\CalculadoraClient\CalculadoraClient\bin\Debug\CalculadoraClient.pdb
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha 4\CalculadoraClient\CalculadoraClient\obj\Debug\CalculadoraClient.csprojAssemblyReference.cache
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha 4\CalculadoraClient\CalculadoraClient\obj\Debug\CalculadoraClient.Form1.resources
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha 4\CalculadoraClient\CalculadoraClient\obj\Debug\CalculadoraClient.Properties.Resources.resources
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha 4\CalculadoraClient\CalculadoraClient\obj\Debug\CalculadoraClient.csproj.GenerateResource.cache
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha 4\CalculadoraClient\CalculadoraClient\obj\Debug\CalculadoraClient.csproj.CoreCompileInputs.cache
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha 4\CalculadoraClient\CalculadoraClient\obj\Debug\CalculadoraClient.exe
+C:\Users\Rafael\Documents\IPCA\LESI 3\ISI\ISI-Repos\ISI-a17025\Ficha 4\CalculadoraClient\CalculadoraClient\obj\Debug\CalculadoraClient.pdb
